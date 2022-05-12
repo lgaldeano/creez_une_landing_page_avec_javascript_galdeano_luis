@@ -12,15 +12,18 @@ const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const closeData = document.querySelector(".close");
+const closeValidations = document.querySelector(".close-validation");
 const visuSpan = document.querySelectorAll(".alertMessage");
 const subMit = document.querySelector(".btn-submit");
 const submitvalid = document.querySelector(".submitvalid");
 const radioLabel = document.querySelector(".radio-label");
 const modalValid = document.querySelector(".submitvalid");
+const radioTournois = document.querySelector(".radio-tournois");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 closeData.addEventListener("click", closeForm);
+closeValidations.addEventListener("click", closeValidation);
 
 // launch modal form
 function launchModal() {
@@ -31,6 +34,9 @@ function launchModal() {
 // close form
 function closeForm() {
   modalbg.style.display = "none";
+}
+function closeValidation() {
+  modalValid.style.display = "none";
 }
 
 // launch modal valid
@@ -64,18 +70,16 @@ validName.addEventListener("input", () => {
   }
 });
 
-
-//Control submit
+// Choix d'une ville
 
 const validMail = document.getElementById("email");
 subMit.addEventListener("click", (e) => {
   e.preventDefault();
-  
-  if(!controlEmail()) {
-    return
+
+  if (!controlEmail()) {
+    return;
   }
-  
-  // Choix d'une ville
+
   let choixUtilisateur = false;
 
   for (i = 1; i < 7; i++) {
@@ -83,7 +87,7 @@ subMit.addEventListener("click", (e) => {
       choixUtilisateur = true;
     }
   }
-  
+
   if (choixUtilisateur === false) {
     radioLabel.style.display = "block";
   } else {
@@ -92,12 +96,14 @@ subMit.addEventListener("click", (e) => {
     launchModalvalid();
   }
   cityChoice = [];
+  validationNombresTournois();
 });
+
 function reLoad() {
   radioLabel.style.display = "none";
 }
 
-//Regex Email
+//Function Regex Email
 function controlEmail() {
   const regexEmail = /\S+@\S+\.\S+\S+/;
   if (validMail.value.search(regexEmail) === 0) {
@@ -109,5 +115,14 @@ function controlEmail() {
   }
 }
 
-//Au moins un tournois
+//Nombre de tournois
+let nombresTournois = document.getElementById("quantity");
 
+function validationNombresTournois() {
+  if ((nombresTournois.value = "")) {
+    radioTournois.style.display = "block";
+  } else {
+    radioTournois.style.display = "none";
+  }
+  console.log(nombresTournois);
+}
