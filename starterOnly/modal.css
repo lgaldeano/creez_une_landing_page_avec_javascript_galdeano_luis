@@ -35,10 +35,10 @@ img {
   margin: 3.5%;
 }
 .header-logo {
-    float: left;
+  float: left;
 }
 .main-navbar {
-    float: right;
+  float: right;
 }
 .topnav a {
   float: left;
@@ -71,7 +71,9 @@ img {
 /*---------------------------------------------------------------------------*/
 /*Rajout media 900px pour tablette*/
 @media screen and (max-width: 768px), (max-width: 900px) {
-  .topnav a {display: none;}
+  .topnav a {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
@@ -79,7 +81,9 @@ img {
 }
 
 @media screen and (max-width: 768px), (max-width: 900px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -93,15 +97,16 @@ img {
 }
 /*--------------------------------------------------------------------------*/
 
-
- @media screen and (max-width: 540px) {
-  .topnav a {display: none;}
+@media screen and (max-width: 540px) {
+  .topnav a {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
     margin-top: -15px;
   }
-} 
+}
 
 main {
   font-size: 130%;
@@ -113,8 +118,6 @@ main {
   margin: 1px 20px 15px;
   border-radius: 2rem;
   text-align: justify;
-
-
 }
 
 .modal-btn {
@@ -185,7 +188,6 @@ main {
   padding-top: 10px;
 }
 
-
 /*Validation du submit----------------------------------------------*/
 .submitvalid {
   display: none;
@@ -224,22 +226,24 @@ main {
   display: flex;
   align-items: center;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
+/*----------------------------------------------------------------------------------------*/
 .btn-close-validation {
   position: absolute;
   left: 185px;
   right: 185px;
   top: 795px;
   bottom: 25px;
-  background: #FE142F;
+  background: #fe142f;
   border-radius: 8px;
   border: none;
   color: #fff;
   text-align: center;
+  cursor: pointer;
 }
-
+/*----------------------------------------------------------------------------------------*/
 .close-validation {
   position: absolute;
   right: 15px;
@@ -266,13 +270,24 @@ main {
   transform: rotate(-45deg);
 }
 
-/*-------------------------------------------------------*/
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
 }
+/*Span alert-------------------------------------------------------*/
 .alertMessage {
   display: none;
+  color: greenyellow;
+}
+
+.validanniv {
+  display: none;
+  color: greenyellow;
+}
+
+.condition-vente {
+  display: none;
+  text-align: center;
   color: greenyellow;
 }
 /*-------------------------------------------------------*/
@@ -315,12 +330,6 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
-/* 
-input[data-error]::after {
-    content: attr(data-error);
-    font-size: 0.4em;
-    color: red;
-} */
 .checkbox-label,
 .checkbox2-label {
   position: relative;
@@ -385,14 +394,18 @@ input[data-error]::after {
   left: 21%;
   top: 19%;
 }
-
+/*Span alert----------------------------------------------------*/
 .radio-label {
+  text-align: center;
   display: none;
+  color: greenyellow;
+
 }
 .radio-tournois {
   display: none;
+  color: greenyellow;
 }
-
+/*-----------------------------------------------------------*/
 .close {
   position: absolute;
   right: 15px;
@@ -604,11 +617,11 @@ footer {
     display: none;
   }
   /*Modification de la font*/
-  .hero-headline {    
+  .hero-headline {
     font-size: 3.5rem;
     white-space: normal;
   }
-    /*Modification de la font*/
+  /*Modification de la font*/
   .hero-text {
     width: unset;
     font-size: 1.3rem;
@@ -638,4 +651,3 @@ footer {
     opacity: 1;
   }
 }
-
