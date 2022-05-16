@@ -229,6 +229,8 @@ main {
   color: #ffffff;
 }
 
+
+
 /*----------------------------------------------------------------------------------------*/
 .btn-close-validation {
   position: absolute;
@@ -641,6 +643,64 @@ footer {
   }
 }
 /*________________________________________________________________________________________________________*/
+
+/*Media fenêtre de fermeture------------------------------------*/
+@media screen and (max-width: 575px) {
+  .submitvalid {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(26, 39, 156, 0.4);
+  }
+  
+  .content-validation {
+    margin: 5% auto;
+    width: 100%;
+    max-width: 500px;
+    height: 850px;
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+    background: #232323;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    padding-top: 10px;
+  }
+  .text-validation {
+    position: absolute;
+    width: auto;
+    height: 102px;
+    left: 100px;
+    right: 140px;
+    top: 361px;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+  
+  }  
+  .btn-close-validation {
+    position: absolute;
+    left: 90px;
+    right: 90px;
+    top: 795px;
+    bottom: 25px;
+    background: #fe142f;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
 
 @keyframes modalopen {
   from {
