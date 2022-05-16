@@ -184,6 +184,3 @@ closeValidations.addEventListener("click", closeValidation);
 subMit.addEventListener("click", validFormulaire);
 fermeValid.addEventListener("click", closeValidation);
 
-//Validation date
-//Validation checkBox condition
-//Remplir les labels sur le HTML
