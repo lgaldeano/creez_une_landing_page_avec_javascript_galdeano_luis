@@ -229,8 +229,6 @@ main {
   color: #ffffff;
 }
 
-
-
 /*----------------------------------------------------------------------------------------*/
 .btn-close-validation {
   position: absolute;
@@ -279,18 +277,28 @@ main {
 /*Span alert-------------------------------------------------------*/
 .alertMessage {
   display: none;
-  color: greenyellow;
+  color: #ff4e60;
+  font-family: Roboto;
+  font-size: 10px;
+  text-align: left;
 }
 
 .validanniv {
   display: none;
-  color: greenyellow;
+  color: #ff4e60;
+  font-family: Roboto;
+  font-size: 10px;
+  text-align: left;
+
 }
 
 .condition-vente {
   display: none;
-  text-align: center;
-  color: greenyellow;
+  color: #ff4e60;
+  font-family: Roboto;
+  font-size: 10px;
+  text-align: left;
+
 }
 /*-------------------------------------------------------*/
 
@@ -319,8 +327,8 @@ input {
   font-size: 0.4em;
   color: #e54858;
   display: block;
-  margin-top: 7px;
-  margin-bottom: 7px;
+  margin-top: 2px;
+  margin-bottom: 2px;
   text-align: right;
   line-height: 0.3;
   opacity: 0;
@@ -398,14 +406,20 @@ input {
 }
 /*Span alert----------------------------------------------------*/
 .radio-label {
-  text-align: center;
   display: none;
-  color: greenyellow;
+  color: #ff4e60;
+  font-family: Roboto;
+  font-size: 10px;
+  text-align: left;
 
 }
 .radio-tournois {
   display: none;
-  color: greenyellow;
+  color: #ff4e60;
+  font-family: Roboto;
+  font-size: 10px;
+  text-align: left;
+
 }
 /*-----------------------------------------------------------*/
 .close {
@@ -657,7 +671,7 @@ footer {
     overflow: auto;
     background-color: rgba(26, 39, 156, 0.4);
   }
-  
+
   .content-validation {
     margin: 5% auto;
     width: 100%;
@@ -684,8 +698,7 @@ footer {
     align-items: center;
     text-align: center;
     color: #ffffff;
-  
-  }  
+  }
   .btn-close-validation {
     position: absolute;
     left: 90px;
@@ -700,7 +713,6 @@ footer {
     cursor: pointer;
   }
 }
-
 
 @keyframes modalopen {
   from {
